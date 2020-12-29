@@ -1,0 +1,13 @@
+<p-toast></p-toast>
+
+<p-tabView (onChange)="handleChange($event)">
+  <p-tabPanel header="Cnet">
+    <!-- <p>{{this.cnetContent}}</p> -->
+    <iframe [srcdoc]="this.cnetContent" title="description"></iframe>
+
+  </p-tabPanel>
+  <p-tabPanel header="IceCat">
+    <!-- <p>{{this.iceCatContent}}</p> -->
+    <iframe [srcdoc]="this.iceCatContent" title="description"></iframe>
+  </p-tabPanel>
+</p-tabView>

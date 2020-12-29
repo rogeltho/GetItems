@@ -1,21 +1,19 @@
-
-
-<div class="playcontainer">
-    <div class="p-grid">
-      <div class="p-col-4">
-        <span class="p-float-label">
-          <input id="float-input" type="text" pInputText class="p-inputtext-lg" > 
-          <label for="float-input">ProductCode</label>
+<div class="playcontainer" [formGroup]="myForm">
+  <div class="p-grid">
+    <div class="p-col-4">
+      <span class="p-float-label">
+        <input formControlName="product"  type="text" pInputText class="p-inputtext-sm">
+        <label for="float-input">Product Code</label>
       </span>
-      </div>
-      <div class="p-col-4">
-        <span class="p-float-label">
-          <input id="float-input" type="text" pInputText class="p-inputtext-lg"> 
-          <label for="float-input">Brand</label>
+    </div>
+    <div class="p-col-4 p-offset-1">
+      <span class="p-float-label">
+        <input formControlName="brand"  type="text" pInputText class="p-inputtext-sm">
+        <label for="float-input">Brand</label>
       </span>
-      </div>
-      <div class="p-col-1">
-        <button pButton type="button" label="Submit" icon="pi pi-check" class="p-button-lg"></button>
-      </div>
+    </div>
+    <div class="p-col-2 p-offset-1">
+      <button (click)="emitSubmitEvent()" pButton type="button" label="Submit" icon="pi pi-check" class="p-button-sm"></button>
     </div>
   </div>
+</div>
