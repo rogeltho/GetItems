@@ -4,9 +4,13 @@
   </div>
 </header>
 
-<app-inputs></app-inputs>
+<main class="main-content">
+  <app-inputs (formSubmitted)="handleSubmit($event)"></app-inputs>
+  <app-item-tabs [formDataProp]="formData"></app-item-tabs>
+</main>
+
 
 
 <div class="container">
-  
+
 </div>
