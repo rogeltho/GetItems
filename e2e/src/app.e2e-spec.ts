@@ -8,9 +8,9 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', async () => {
+  it('should display the header logo text', async () => {
     await page.navigateTo();
-    expect(await page.getTitleText()).toEqual('GetItems app is running!');
+    expect(await page.getHeaderLogoText()).toEqual('Disway');
   });
 
   afterEach(async () => {
